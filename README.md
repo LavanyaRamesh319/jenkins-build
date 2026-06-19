@@ -43,15 +43,15 @@ pipeline {
         success {
             emailext (
                 to: 'lavanyaramesh319@gmail.com',
-                subject: "Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: "Build succeeded!\n\nCheck Jenkins console for details."
+                subject: "Build SUCCESS",
+                body: "Build succeeded!"
             )
         }
         failure {
             emailext (
                 to: 'lavanyaramesh319@gmail.com',
-                subject: "Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: "Build failed!\n\nCheck Jenkins console for details."
+                subject: "Build FAILED",
+                body: "Build failed!"
             )
         }
     }
