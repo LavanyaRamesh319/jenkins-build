@@ -27,7 +27,7 @@ git commit -m "Initial commit with hello.sh"
 git remote add origin https://github.com/LavanyaRamesh319/jenkins-build.git
 git push -u origin main
 
-2. Add Jenkinsfile
+### 2. Add Jenkinsfile
 pipeline {
     agent any
 
@@ -62,7 +62,7 @@ git add Jenkinsfile
 git commit -m "Added Jenkinsfile with email notification"
 git push origin main
 
-3. Configure Jenkins
+###3. Configure Jenkins
 New Item → Pipeline → Github-Autobuild
 
 Pipeline definition: Pipeline script from SCM
@@ -77,7 +77,7 @@ Script Path: Jenkinsfile
 
 Build Trigger: GitHub hook trigger for GITScm polling
 
-4. Configure GitHub Webhook
+###4. Configure GitHub Webhook
 Repo → Settings → Webhooks → Add webhook
 
 Payload URL:
@@ -86,7 +86,7 @@ Content type: application/json
 
 Trigger: “Just the push event”
 
-5. Configure Email
+###5. Configure Email
 Jenkins → Manage Jenkins → Configure System → Extended E-mail Notification
 
 SMTP: smtp.gmail.com
